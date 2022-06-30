@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <title>Analisador Sintático</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="mx-auto">
+    <header align="center">
+        <div>
+            <h1 class="h1">Analisador Sintático</h1>
+        </div>
+    </header>
+    <main>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+            <div class="container-fluid">
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Analisador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tabela.html">Gramática</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h3 style="margin-top: 10px">Informações da Gramática</h3>
+        <h5 style="margin-top: 20px">Gramática:</h5>
+        <div class="modal-gramatica">
+            <p>S::= aAc | bCa</p>
+            <p>A::= bCb | aBa | cSb</p>
+            <p>B::= cS | bAa</p>
+            <p>C::= cSc | ε</p>
+        </div>
+        <h5>Conjuntos:</h5>
+        <table class="table table-bordered modal-conjuntos">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">FIRST</th>
+                    <th scope="col">FOLLOW</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>S = a, b</td>
+                    <td>S = $, a, b, c</td>
+                </tr>
+                <tr>
+                    <td>A = a, c</td>
+                    <td>A = a, b, c</td>
+                </tr>
+                <tr>
+                    <td>B = b, c</td>
+                    <td>B = a</td>
+
+                </tr>
+                <tr>
+                    <td>C = c, ε</td>
+                    <td>C = a, b</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Tabela Parsing:</h5>
+        <table class="table table-bordered modal-parsing">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col"></th>
+                    <th scope="col">a</th>
+                    <th scope="col">b</th>
+                    <th scope="col">c</th>
+                    <th scope="col">$</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">S</th>
+                    <td>S → aAc</td>
+                    <td>S → bCa</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th scope="row">A</th>
+                    <td>A → aBa</td>
+                    <td>A → bCb</td>
+                    <td>A → cSb</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th scope="row">B</th>
+                    <td>-</td>
+                    <td>B → bAa</td>
+                    <td>B → cS</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th scope="row">C</th>
+                    <td>C → ε</td>
+                    <td>C → ε</td>
+                    <td>C → cSc</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    </footer>
+</body>
+
+</html

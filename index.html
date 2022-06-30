@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <title>Analisador Sintático</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body class="mx-auto">
+  <header align="center">
+    <div>
+      <h1 class="h1">Analisador Sintático</h1>
+    </div>
+  </header>
+  <main>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+      <div class="container-fluid">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Analisador</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tabela.html">Gramática</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+    <section id="filas">
+      <div class="card card-custom">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="chegadas-fila">Sentença</label>
+              <input type="text" class="form-control" id="sentenca" placeholder="" value="">
+            </div>
+          </div>
+          <div class="row" style="margin-top: -25px;">
+            <div class="col-md-4 mb-3 button-custom">
+              <button type="button" id="gerar-sentenca" class="btn btn-dark">Gerar sentença</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card-body table-responsive-sm" id='resultado'>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="toast position-absolute" role="alert" id="attention-toast" aria-live="assertive" aria-atomic="true">
+      <div class="toast-body">
+        Processo concluído, favor refazer o processo novamente!
+        <div class="mt-2 pt-2 border-top">
+          <button type="button" class="btn btn-dark btn-sm" id="toast-reset">Refazer Processo</button>
+        </div>
+      </div>
+    </div>
+    <div class="toast" role="alert" id="toast-actions" aria-live="assertive" aria-atomic="true">
+      <div class="toast-body">
+        <button type="button" class="btn btn-secondary" id="doAllSteps">Executar</button>
+        <button type="button" class="btn btn-dark" id="doNextStep">Executar passo à passo</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </footer>
+</body>
+
+</html

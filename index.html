@@ -12,21 +12,19 @@
 </head>
 
 <body class="mx-auto">
-  <header align="center">
-    <div>
-      <h1 class="h1">Analisador Sintático</h1>
-    </div>
-  </header>
   <main>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin-top: 20px">
 
       <div class="container-fluid">
         <!-- Links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Analisador</a>
+            <a class="navbar-brand">Analisador Sintático</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" style="margin-top: -3px; margin-left: 10px;">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <li class="nav-item" style="margin-top: -3px">
             <a class="nav-link" href="tabela.html">Gramática</a>
           </li>
         </ul>
@@ -44,7 +42,7 @@
           </div>
           <div class="row" style="margin-top: -25px;">
             <div class="col-md-4 mb-3 button-custom">
-              <button type="button" id="gerar-sentenca" class="btn btn-dark">Gerar sentença</button>
+              <button type="button" id="gerar-sentenca" class="btn btn-dark">Gerar Token</button>
             </div>
           </div>
         </div>
@@ -64,8 +62,8 @@
     </div>
     <div class="toast" role="alert" id="toast-actions" aria-live="assertive" aria-atomic="true">
       <div class="toast-body">
-        <button type="button" class="btn btn-secondary" id="doAllSteps">Executar</button>
-        <button type="button" class="btn btn-dark" id="doNextStep">Executar passo à passo</button>
+        <button type="button" class="btn btn-secondary" id="doAllSteps">Resolver</button>
+        <button type="button" class="btn btn-dark" id="doNextStep">Executar Passo a Passo</button>
       </div>
     </div>
   </main>
